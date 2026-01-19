@@ -1,0 +1,12 @@
+# No subir datos del juego
+official_mc/
+custom_versions/
+game_data/
+LadLauncher_Data/
+
+# No subir archivos basura de Python
+__pycache__/
+*.pyc
+
+# No subir el ejecutable (pesa mucho)
+*.exe

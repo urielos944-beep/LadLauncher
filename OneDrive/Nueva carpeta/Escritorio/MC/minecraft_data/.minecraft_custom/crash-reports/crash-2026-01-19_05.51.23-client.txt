@@ -1,0 +1,157 @@
+---- Minecraft Crash Report ----
+// Hi. I'm Minecraft, and I'm a crashaholic.
+
+Time: 2026-01-19 05:51:23
+Description: Argument parsing
+
+java.lang.IllegalArgumentException: Invalid UUID string: 
+	at java.base/java.util.UUID.fromString1(UUID.java:280)
+	at java.base/java.util.UUID.fromString(UUID.java:258)
+	at com.mojang.util.UndashedUuid.fromStringLenient(UndashedUuid.java:14)
+	at net.minecraft.client.main.Main.main(SourceFile:186)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: main
+Stacktrace:
+	at java.base/java.util.UUID.fromString1(UUID.java:280)
+	at java.base/java.util.UUID.fromString(UUID.java:258)
+	at com.mojang.util.UndashedUuid.fromStringLenient(UndashedUuid.java:14)
+
+-- Initialization --
+Details:
+	Modules: 
+		ADVAPI32.dll:API base de Windows 32 avanzado:10.0.26100.3624 (WinBuild.160101.0800):Microsoft Corporation
+		COMCTL32.dll:Biblioteca de controles de la experiencia del usuario:6.10 (WinBuild.160101.0800):Microsoft Corporation
+		CRYPTBASE.dll:Base cryptographic API DLL:10.0.26100.7623 (WinBuild.160101.0800):Microsoft Corporation
+		CRYPTSP.dll:Cryptographic Service Provider API:10.0.26100.7623 (WinBuild.160101.0800):Microsoft Corporation
+		DBGHELP.DLL:Windows Image Helper:10.0.26100.5074 (WinBuild.160101.0800):Microsoft Corporation
+		DNSAPI.dll:DLL de API de cliente DNS:10.0.26100.1591 (WinBuild.160101.0800):Microsoft Corporation
+		GDI32.dll:GDI Client DLL:10.0.26100.7309 (WinBuild.160101.0800):Microsoft Corporation
+		IMM32.DLL:Multi-User Windows IMM32 API Client DLL:10.0.26100.7309 (WinBuild.160101.0800):Microsoft Corporation
+		IPHLPAPI.DLL:API auxiliar para IP:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		KERNEL32.DLL:Archivo DLL de cliente API BASE de Windows NT:10.0.26100.7309 (WinBuild.160101.0800):Microsoft Corporation
+		KERNELBASE.dll:Archivo DLL de cliente API BASE de Windows NT:10.0.26100.7309 (WinBuild.160101.0800):Microsoft Corporation
+		NSI.dll:NSI User-mode interface DLL:10.0.26100.7623 (WinBuild.160101.0800):Microsoft Corporation
+		OLEAUT32.dll:OLEAUT32.DLL:10.0.26100.7309 (WinBuild.160101.0800):Microsoft Corporation
+		POWRPROF.dll:Archivo DLL auxiliar del perfil de energía:10.0.26100.7689 (WinBuild.160101.0800):Microsoft Corporation
+		PSAPI.DLL:Process Status Helper:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		Pdh.dll:Ayudante de los datos de rendimiento DLL de Windows:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		RPCRT4.dll:Tiempo de ejecución de llamada a procedimiento remoto:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		SHCORE.dll:SHCORE:10.0.26100.7689 (WinBuild.160101.0800):Microsoft Corporation
+		SHELL32.dll:Archivo DLL común del shell de Windows:10.0.26100.7306 (WinBuild.160101.0800):Microsoft Corporation
+		UMPDC.dll:User Mode Power Dependency Coordinator:10.0.26100.7019 (WinBuild.160101.0800):Microsoft Corporation
+		USER32.dll:Archivo DLL de cliente API USER de Windows multiusuario:10.0.26100.7689 (WinBuild.160101.0800):Microsoft Corporation
+		USERENV.dll:Userenv:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		VCRUNTIME140.dll:Microsoft® C Runtime Library:14.40.33810.0:Microsoft Corporation
+		VERSION.dll:Version Checking and File Installation Libraries:10.0.26100.1150 (WinBuild.160101.0800):Microsoft Corporation
+		WINMM.dll:MCI API DLL:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		WS2_32.dll:DLL de 32 bits de Windows Socket 2.0:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		amsi.dll:Anti-Malware Scan Interface:10.0.26100.7309 (WinBuild.160101.0800):Microsoft Corporation
+		bcrypt.dll:Biblioteca de primitivas criptográficas de Windows:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		bcryptPrimitives.dll:Windows Cryptographic Primitives Library:10.0.26100.7623 (WinBuild.160101.0800):Microsoft Corporation
+		clbcatq.dll:COM+ Configuration Catalog:2001.12.10941.16384 (WinBuild.160101.0800):Microsoft Corporation
+		combase.dll:Microsoft COM para Windows:10.0.26100.6725 (WinBuild.160101.0800):Microsoft Corporation
+		dbgcore.DLL:Windows Core Debugging Helpers:10.0.26100.7309 (WinBuild.160101.0800):Microsoft Corporation
+		fwpuclnt.dll:API de modo usuario de FWP/IPsec:10.0.26100.3915 (WinBuild.160101.0800):Microsoft Corporation
+		gdi32full.dll:GDI Client DLL:10.0.26100.7309 (WinBuild.160101.0800):Microsoft Corporation
+		java.dll:OpenJDK Platform binary:25.0.1.0:Eclipse Adoptium
+		javaw.EXE:OpenJDK Platform binary:25.0.1.0:Eclipse Adoptium
+		jimage.dll:OpenJDK Platform binary:25.0.1.0:Eclipse Adoptium
+		jli.dll:OpenJDK Platform binary:25.0.1.0:Eclipse Adoptium
+		jna2178008952097436341.dll:JNA native library:7.0.0:Java(TM) Native Access (JNA)
+		jvm.dll:OpenJDK 64-Bit server VM:25.0.1.0:Eclipse Adoptium
+		kernel.appcore.dll:AppModel API Host:10.0.26100.7309 (WinBuild.160101.0800):Microsoft Corporation
+		management.dll:OpenJDK Platform binary:25.0.1.0:Eclipse Adoptium
+		management_ext.dll:OpenJDK Platform binary:25.0.1.0:Eclipse Adoptium
+		mdnsNSP.dll:Bonjour Namespace Provider:3,0,0,10:Apple Inc.
+		msvcp140.dll:Microsoft® C Runtime Library:14.40.33810.0:Microsoft Corporation
+		msvcp_win.dll:Microsoft® C Runtime Library:10.0.26100.7623 (WinBuild.160101.0800):Microsoft Corporation
+		msvcrt.dll:Windows NT CRT DLL:7.0.26100.7623 (WinBuild.160101.0800):Microsoft Corporation
+		mswsock.dll:Proveedor de servicios de Microsoft Windows Sockets 2.0:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		napinsp.dll:Proveedor de correcciones de compatibilidad (shim) de nomenclaturas de correo electrónico:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		net.dll:OpenJDK Platform binary:25.0.1.0:Eclipse Adoptium
+		nio.dll:OpenJDK Platform binary:25.0.1.0:Eclipse Adoptium
+		nlansp_c.dll:NLA Namespace Service Provider DLL:10.0.26100.7309 (WinBuild.160101.0800):Microsoft Corporation
+		ntdll.dll:DLL del nivel de Windows NT:10.0.26100.7309 (WinBuild.160101.0800):Microsoft Corporation
+		ole32.dll:Microsoft OLE para Windows:10.0.26100.6725 (WinBuild.160101.0800):Microsoft Corporation
+		perfos.dll:DLL de objetos de rendimiento del sistema Windows:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		pfclient.dll:SysMain Client:10.0.26100.4202 (WinBuild.160101.0800):Microsoft Corporation
+		profapi.dll:User Profile Basic API:10.0.26100.7309 (WinBuild.160101.0800):Microsoft Corporation
+		rasadhlp.dll:Remote Access AutoDial Helper:10.0.26100.7171 (WinBuild.160101.0800):Microsoft Corporation
+		rsaenh.dll:Microsoft Enhanced Cryptographic Provider:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		sechost.dll:Host for SCM/SDDL/LSA Lookup APIs:10.0.26100.1 (WinBuild.160101.0800):Microsoft Corporation
+		shlwapi.dll:Biblioteca de utilidades de Shell:10.0.26100.7689 (WinBuild.160101.0800):Microsoft Corporation
+		ucrtbase.dll:Microsoft® C Runtime Library:10.0.26100.7623 (WinBuild.160101.0800):Microsoft Corporation
+		vcruntime140_1.dll:Microsoft® C Runtime Library:14.40.33810.0:Microsoft Corporation
+		verify.dll:OpenJDK Platform binary:25.0.1.0:Eclipse Adoptium
+		win32u.dll:Win32u:10.0.26100.7623 (WinBuild.160101.0800):Microsoft Corporation
+		windows.storage.dll:API de almacenamiento de Microsoft WinRT:10.0.26100.7689 (WinBuild.160101.0800):Microsoft Corporation
+		winrnr.dll:LDAP RnR Provider DLL:10.0.26100.1882 (WinBuild.160101.0800):Microsoft Corporation
+		wintypes.dll:DLL de tipos basados en Windows:10.0.26100.6725 (WinBuild.160101.0800):Microsoft Corporation
+		wshbth.dll:Windows Sockets Helper DLL:10.0.26100.5074 (WinBuild.160101.0800):Microsoft Corporation
+		zip.dll:OpenJDK Platform binary:25.0.1.0:Eclipse Adoptium
+Stacktrace:
+	at net.minecraft.client.main.Main.main(SourceFile:186)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.21 Pre-Release 3
+	Minecraft Version ID: 1.21-pre3
+	Operating System: Windows 11 (amd64) version 10.0
+	Java Version: 25.0.1, Eclipse Adoptium
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Eclipse Adoptium
+	Memory: 103859584 bytes (99 MiB) / 364904448 bytes (348 MiB) up to 2147483648 bytes (2048 MiB)
+	CPUs: 8
+	Processor Vendor: AuthenticAMD
+	Processor Name: AMD Ryzen 3 7320U with Radeon Graphics         
+	Identifier: AuthenticAMD Family 23 Model 160 Stepping 0
+	Microarchitecture: unknown
+	Frequency (GHz): 2.39
+	Number of physical packages: 1
+	Number of physical CPUs: 4
+	Number of logical CPUs: 8
+	Graphics card #0 name: Microsoft Basic Display Adapter
+	Graphics card #0 vendor: Microsoft
+	Graphics card #0 VRAM (MiB): 0.00
+	Graphics card #0 deviceId: VideoController1
+	Graphics card #0 versionInfo: 10.0.26100.1
+	Graphics card #1 name: AMD Radeon(TM) Graphics
+	Graphics card #1 vendor: Advanced Micro Devices, Inc.
+	Graphics card #1 VRAM (MiB): 2048.00
+	Graphics card #1 deviceId: VideoController2
+	Graphics card #1 versionInfo: 32.0.21030.1005
+	Memory slot #0 capacity (MiB): 4096.00
+	Memory slot #0 clockSpeed (GHz): 5.50
+	Memory slot #0 type: Unknown
+	Memory slot #1 capacity (MiB): 4096.00
+	Memory slot #1 clockSpeed (GHz): 5.50
+	Memory slot #1 type: Unknown
+	Virtual memory max (MiB): 24309.25
+	Virtual memory used (MiB): 15346.30
+	Swap memory total (MiB): 18432.00
+	Swap memory used (MiB): 1465.73
+	Space in storage for jna.tmpdir (MiB): available: 57044.65, total: 243337.00
+	Space in storage for org.lwjgl.system.SharedLibraryExtractPath (MiB): available: 57044.65, total: 243337.00
+	Space in storage for io.netty.native.workdir (MiB): available: 57044.65, total: 243337.00
+	Space in storage for java.io.tmpdir (MiB): available: 57044.65, total: 243337.00
+	Space in storage for workdir (MiB): available: 57044.65, total: 243337.00
+	JVM Flags: 2 total; -Xmx2G -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump
+	Launched Version: 1.21-pre3
+	Launcher name: minecraft-launcher-lib
+	Backend library: LWJGL version 3.3.3+5
+	Backend API: Unknown
+	Window size: <not initialized>
+	GFLW Platform: <error>
+	GL Caps: ERR
+	GL debug messages: <disabled>
+	Is Modded: Probably not. Client jar signature and brand is untouched
+	Universe: 404
+	Type: Client (map_client.txt)
+	Locale: es_MX
+	System encoding: Cp1252
+	File encoding: UTF-8
+	CPU: <unknown>
